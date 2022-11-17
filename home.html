@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="file:///C:/Users/student.DESKTOP-7S9KNPD/Desktop/iba/jmc_IBAWEB/style.css">
+    <title>website</title>
+
 </head>
 <body>
-    <div id="navlist">
-        <a href="#"> &nbsp;&nbsp;&nbsp; Home</a>
-        <a href="#">&nbsp;Our Products</a>
-        <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Careers</a>
-        <div class="navlist-right">
-        <a href="#">&nbsp;&nbsp;&nbsp;About Us</a>
-        <a href="#">&nbsp;&nbsp;Contact Us</a>
-        </div>
+    <div id="navigation-bar" class="navbar">
+        <a href="#">THE MAIN HUB</a>
+        <a href="#">THE MAIN HUB</a>
+        <div class="navigationbar-right">
+            <a href="#">THE MAIN HUB</a>
+        </div><br>
+        <div class="navigationsearchbar">
+            <div id="search bar">
+                <br><form action="#">
+                    <center>
+                        <input id="searchinput" type="text"
+            placeholder=" Search the HUB"
+            name="search">
+                    <button>
+            <i class="fa fa-search"
+                style="font-size: 30px;">
+            </i>
+        </button></center>
+                </form>
+                <script type="text/javascript">
+                    // get search bar element
+                  const searchInput = document.getElementById("searchinput");
+                   
+                  // store name elements in array-like object
+                  const namesFromDOM = document.getElementsByClassName("searchassign");
+                   
+                  // listen for user events
+                  searchInput.addEventListener("keyup", (event) => {
+                  const { value } = event.target;
+                   
+                  // get user search input converted to lowercase
+                  const searchQuery = value.toLowerCase();
+                   
+                  for (const nameElement of namesFromDOM) {
+                  // store name text and convert to lowercase
+                  let name = nameElement.textContent.toLowerCase();
+                   
+                  // compare current name to search input
+                  if (name.includes(searchQuery)) {
+                    // found name matching search, display it
+                    nameElement.style.display = "block";
+                  } else {
+                    // no match, don't display name
+                    nameElement.style.display = "none";
+                  }
+                  }
+                  });
+                  </script>
+                  <ul id="searchobjects">
+            </div>
     </div>
-
-    
+    </div>
 </body>
 </html>
